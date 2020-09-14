@@ -1,0 +1,742 @@
+@charset "utf-8";
+
+
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+	background: #fff;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
+a img {
+	border: 0;
+	display:block;
+}
+
+
+
+
+/* SET DEFAULT */
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #666666;
+	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-size: 1.3rem;
+	line-height: 1.6;
+}
+
+body{
+	background:#e6e9ea;
+}
+
+/* Headings */
+
+
+h1,h2,h3,h4,h5,h6 {
+	clear: both;
+	margin:0px 0px 10px 0px;
+}
+
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+	h1 { font-size: 24px; line-height: 30px; }
+	h2 { font-size: 22px; line-height: 26px; }
+	h3 { font-size: 18px; line-height: 24px; }
+	h4 { font-size: 16px; line-height: 20px; }
+	h5 { font-size: 14px; line-height: 18px; }
+	h6 { font-size: 14px; line-height: 18px; }
+	
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+
+/* Text elements */
+
+
+p {
+	margin-bottom: 1.5em;
+}
+ul, ol {
+	margin: 0 0 1.5em 3em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote {
+	margin: 0 1.5em;
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	overflow: auto;
+	max-width: 100%;
+}
+code, kbd, tt, var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+button,
+input,
+select,
+textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+}
+button,
+input {
+	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+	*overflow: visible;  /* Corrects inner spacing displayed oddly in IE6/7 */
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid #ccc;
+	border-color: #ccc #ccc #bbb #ccc;
+	border-radius: 3px;
+	background: #fafafa; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fafafa 60%, #e6e6e6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,#fafafa), color-stop(100%,#e6e6e6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* IE10+ */
+	background: linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#e6e6e6',GradientType=0 ); /* IE6-9 */
+	box-shadow: inset 0 2px 1px #fff;
+	color: rgba(0,0,0,.8);
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	font-size: 12px;
+	font-size: 1.2rem;
+	padding: 8px 20px;;
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	background: #f5f5f5; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f5f5f5 60%, #dcdcdc 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,#f5f5f5), color-stop(100%,#dcdcdc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f5f5f5 60%,#dcdcdc 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f5f5f5 60%,#dcdcdc 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f5f5f5 60%,#dcdcdc 100%); /* IE10+ */
+	background: linear-gradient(top,  #f5f5f5 60%,#dcdcdc 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#dcdcdc',GradientType=0 ); /* IE6-9 */
+	border-color: #bbb #bbb #aaa #bbb;
+}
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb #bbb;
+	box-shadow: inset 0 2px 3px rgba(0,0,0,.15);
+	box-shadow: inset 0 2px 2px rgba(0,0,0,.15);
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
+input[type=text],
+input[type=email],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+	color: #111;
+}
+input[type=text],
+input[type=email] {
+	padding: 7px 10px;
+}
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: 8px 10px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 98%;
+}
+
+
+/* Links */
+a {
+	color:#497F63;
+	text-decoration: none;
+}
+a:visited {
+	color:#497F63;
+}
+a:hover,
+a:focus,
+a:active {
+	color:#56AE4C;
+}
+
+
+/* Template */
+
+#wrapper{
+	width:810px;
+	height:100%;
+	background:#fbf9f8;
+	margin:0px auto;
+}
+
+
+/* Header */
+
+#header{
+	height:60px;
+	background:#353535;
+	position:relative;
+}
+
+.logo{
+	left:25px;
+	z-index:100;
+	position:absolute;
+	top:0px;
+}
+
+.likebutton{
+	float:right;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-top: 16px;
+	margin-right:25px;
+}
+
+.likebutton a:link,.likebutton a:visited{
+	color:#fff;
+} 
+
+.menu{
+	float:left;
+	margin-left:200px;
+}
+
+.menu ul{
+	list-style: none;
+	margin:0px;
+	padding:0px;
+	text-transform: uppercase;
+}
+
+.menu ul li{
+	float:left;
+	line-height:58px;
+	text-align: center;
+	padding:0px 10px;
+}
+
+.menu ul li a:link, .menu ul li a:visited{
+	color:#fff;
+}
+
+.menu ul li a:hover{
+	color:#66BA3C;
+}
+
+/* Slider */
+
+#slider{
+	width:810;
+	height:400px;
+	background:#111;
+}
+
+/* Intro-banner */
+
+#intro-banner{
+	padding:40px 0px;
+	text-align:center;
+	color:#fff;
+	text-transform: uppercase;
+	background:#5ab14e;
+}
+
+#intro-banner h3{
+	margin:0px 0px;
+	font-size:24px;
+	line-height: 120%;
+}
+
+/* Services */
+
+#services{
+	padding:20px 0px 20px 0px;
+}
+
+.service-block{
+	text-align:center;
+}
+
+.service-icon{
+	font-size: 48px;
+	color:#5AB14E;
+}
+
+.service-block h2{
+	font-size: 16px;
+	font-weight: 700;
+	color:#333;
+	text-transform: uppercase;
+}
+
+
+/* Portfolio */
+
+#portfolio{
+	padding:20px 0px;
+}
+
+ul.folio-filter{
+	list-style: none;
+	padding:0px 0px;
+	border-bottom:10px solid #ddd;
+	text-transform: uppercase;
+}
+
+ul.folio-filter li{
+	float:left;
+	margin:0px 20px 10px 0px;
+}
+
+
+ul#portfolio-blocks{
+	margin:0px;
+	padding:0px;
+
+}
+
+
+li.pblock{
+	background:#fff;
+	box-shadow:0px 0px 1px #ddd;
+	margin-top:20px;
+	margin-bottom:20px;
+	width:240px;
+	
+}
+
+
+
+li.pblock h3{
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 14px;
+	color:#333;
+}
+
+li.pblock p{
+	text-align: center;
+	padding:0px 20px
+}
+
+.portimage{
+	position:relative;
+	overflow:hidden;
+	margin-bottom:10px;
+	width:240px;
+	height:180px;
+	border-bottom:2px solid #5AB14E;
+}
+
+
+.zoom{
+	position: absolute;
+	z-index:100;
+	left:0;
+	top:-200px;
+	display: block;
+	width:240px;
+	height:180px;
+	background:url(../images/zoom.png) no-repeat center center;
+}
+
+/* Article */
+
+.article{
+	padding:40px 0px 20px 0px;
+}
+
+.subarticle{
+	padding:20px 0px 20px 0px;
+}
+
+.article h1{
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 18px;
+		color:#333;
+}
+
+.article img{
+	margin-bottom:10px;
+	
+}
+
+
+img.about-img{
+	float:left;
+	padding:5px 20px 0px 0px;
+}
+
+
+/* Team */
+
+#team{
+	padding:20px 0px;
+}
+
+.team-block{
+	
+}
+
+.team-block img{
+	margin-bottom:10px;
+	
+}
+
+.team-block h2{
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 14px;
+	color:#333;
+	margin:0px 0px;
+}
+
+.staff-social{
+	list-style: none;
+	margin:0px 0px 10px 0px;
+	display:block;
+}
+
+.staff-social li{
+	float:left;
+	margin-right:3px;
+}
+
+
+/* Contact */
+
+.contact-box{
+	padding:20px 0px;
+}
+
+.contact-box h2{
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 18px;
+	color:#333;
+}
+
+#contact-form h3{
+	font-size:12px;
+	
+	}
+
+#contact-form h3 span{ 
+	width:100%; 
+	float:left; 
+	padding-top:8px;
+	}
+	
+.contact-input{
+	width:300px; 
+	height:20px; 
+	margin-bottom:15px; 
+	padding:3px 10px;
+	}
+
+.contact-text-area{
+	width:380px; 
+	height:150px; 
+	margin-bottom:15px;
+	padding:10px 10px;
+	 }
+	 
+a.mail-submit{
+	float:left!important;
+	color:#fff!important;
+	margin:20px 0px!important;
+}	 
+
+
+#contact-info h3{
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 14px;
+	color:#333;
+	
+}
+ 
+#contact-info ul{
+	margin:0px 0px;
+	list-style: none;
+	
+}
+
+#contact-info ul li{
+	margin:5px 0px 0px 0px;
+}
+	 
+/* CTA */
+
+#cta{
+	margin-top:0px;
+	margin-bottom:40px;
+	background: #fff;
+	box-shadow:0px 0px 1px #ddd;
+	height:80px;
+
+}
+
+#cta h3{
+	margin:30px 20px;
+	float:left;
+	font-size:24px;
+	text-transform: uppercase;
+	width:560px;
+	font-weight: 700;
+
+}
+
+
+a.contact-button,.mail-submit{
+	width: 110px; height: 39px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; background-color: #50ac44; -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.19), inset 0 1px rgba(255,255,255,.5), inset 0 0 5px rgba(255,255,255,.31); -moz-box-shadow: 0 1px 1px rgba(0,0,0,.19), inset 0 1px rgba(255,255,255,.5), inset 0 0 5px rgba(255,255,255,.31); box-shadow: 0 1px 1px rgba(0,0,0,.19), inset 0 1px rgba(255,255,255,.5), inset 0 0 5px rgba(255,255,255,.31); border: solid 1px #3b8e31; background-image: -webkit-linear-gradient(top, rgba(255,255,255,.34), rgba(255,255,255,0)); background-image: -moz-linear-gradient(top, rgba(255,255,255,.34), rgba(255,255,255,0)); background-image: -o-linear-gradient(top, rgba(255,255,255,.34), rgba(255,255,255,0)); background-image: -ms-linear-gradient(top, rgba(255,255,255,.34), rgba(255,255,255,0)); background-image: linear-gradient(to bottom, rgba(255,255,255,.34), rgba(255,255,255,0)); display:block; float:right; margin:20px 20px; line-height: 39px; text-align: center; color: #fff; font-size: 16px; font-weight: 700;
+}
+
+
+/* Clients */
+
+#clients{
+	border-top:1px solid #ddd;
+	background:#fff;
+	padding:10px 0px;
+}
+
+/* Footer */
+
+#footer{
+	background:#3f403a;
+	padding:25px 0px;
+	margin-bottom:30px;
+}
+
+.footer-left{
+	margin-left:25px;
+	color:#fff;
+	width:350px;
+	float:left;
+}
+
+.footer-left h3{
+	font-size:18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin:0px 0px;
+	line-height:100%;
+}
+
+.footer-left p{
+	margin:0px;
+}
+.footer-right{
+	margin-right:25px;
+	float: right;
+	width:300px;
+}
+
+ul.social{
+	margin: 0px;
+	list-style: none
+	
+}
+
+ul.social li{
+	float:right;
+	margin:0px 0px 0px 10px;
+
+}
+
+ul.social li a:link, ul.social li a:visited{
+	font-size:20px;
+	font-weight: 700;
+	line-height:38px;
+	width:36px;
+	height:36px;
+	text-align: center;
+	color:#3f403a;
+	border-radius: 18px;
+	background:#636363;
+	display: block;
+}
+
+ ul.social li a:hover{
+	color:#3f403a;
+	background:#eee;
+
+}
+
