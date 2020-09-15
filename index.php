@@ -3,9 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-
 <title>Sharp</title>
-
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/grid.css" rel="stylesheet" type="text/css" />
 <link href="css/flexslider.css" rel="stylesheet" type="text/css" />
@@ -13,15 +11,12 @@
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
 <link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-
-
 <script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 <script type="text/javascript" src="scripts/jquery-easing-1.3.js"></script>
 <script type="text/javascript" src="scripts/jquery.quicksand.js"></script>
 <script type="text/javascript" src="scripts/jquery.prettyPhoto.js"></script>
 <script type="text/javascript" src="scripts/jquery.flexslider-min.js"></script>
-
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -35,7 +30,6 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
-
 </head>
 <body>
 
